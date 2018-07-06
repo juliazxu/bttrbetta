@@ -27,14 +27,14 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
   margin-top: 0;
-  margin-bottom: $medium-padding;
+  margin-bottom: $small-padding;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
   margin-top: 0;
-  margin-bottom: $medium-padding;
+  margin-bottom: $small-padding;
 }
 
 p {
@@ -71,19 +71,32 @@ h3 {
 
 // Sections and section flex
 
-.section-black {
-  background-color: $black;
+%section {
   padding: 0 $medium-padding $medium-padding $medium-padding;
-  align-items: center;
+  align-items: center; 
+}
+
+.section-black {
+  @extend %section;
+  background-color: $black;
+}
+
+.section-white {
+  @extend %section;
+  background-color: $white;
+}
+
+%flex {
+  display: flex;
 }
 
 .flex-row {
-  display: flex;
+  @extend %flex;
   flex-direction: row;
 }
 
 .flex-column {
-  display: flex;
+  @extend %flex;
   flex-direction: column;
 }
 
