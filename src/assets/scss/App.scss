@@ -1,12 +1,133 @@
 $bg-color: yellow;
 $border-color: red;
+$white: white;
+$black: black;
+$primary-blue: #076f7e;
+$large-padding: 6em;
+$medium-padding: 4em;
+$small-padding: 1.5em;
+$medium-text-size: 1.5em;
+$large-text-size: 2.5em;
+$alegreya: 'Alegreya Sans', sans-serif;
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: $large-text-size;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: $medium-padding;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: $medium-padding;
+}
+
+p {
+  font-family: $alegreya;
+}
+
+h3 {
+  font-family: $alegreya;
+  font-weight: 600;
+}
 
 .app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
+  font-family: $alegreya;
+}
 
-  p {
-    background-color: $bg-color;
-  }
+.white {
+  color: $white;
+}
+
+// Header
+
+.header {
+  padding: $small-padding $medium-padding;
+  background-color: $black;
+}
+
+.header .links {
+  color: $white;
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: $medium-text-size;
+  margin-left: $large-padding;
+  cursor: pointer;
+}
+
+// Sections and section flex
+
+.section-black {
+  background-color: $black;
+  padding: 0 $medium-padding $medium-padding $medium-padding;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-prompt {
+  max-width: 600px;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+// Buttons
+
+.button-container {
+  width: 100%;
+  height: 80px;
+  display: table;
+  border-collapse: separate;
+}
+
+.button-container .primary-button {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $primary-blue;
+  color: $white;
+  font-size: $medium-text-size;
+  width: auto;
+  font-family: $alegreya;
+  font-weight: 600;
+  border-width: 0;
+  padding: $small-padding;
+  white-space: nowrap;
+  overflow: visible;
+  cursor: pointer;
+}
+
+#email {
+  background-color: #b1b1b1;
+  max-width: 600px;
+  padding: 20px;
+  font-family: $alegreya;
+  color: $black;
+  border-width: 0;
+  margin-bottom: $small-padding;
+  font-size: $medium-text-size;
 }
