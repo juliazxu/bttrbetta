@@ -6,6 +6,7 @@ $primary-blue: #076f7e;
 $large-padding: 6em;
 $medium-padding: 4em;
 $small-padding: 1.5em;
+$tiny-padding: 1em;
 $medium-text-size: 1.5em;
 $large-text-size: 2.5em;
 $alegreya: 'Alegreya Sans', sans-serif;
@@ -20,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  background-color: $black;
 }
 
 h1 {
@@ -108,6 +110,33 @@ h3 {
   margin-left: auto;
 }
 
+// Media Queries
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+// Mail Chimp
+
+.hidden {
+  position: absolute; 
+  left: -5000px;
+}
+
+#email {
+  background-color: #b1b1b1;
+  max-width: 600px;
+  width: 600px;
+  padding: 20px;
+  font-family: $alegreya;
+  color: $black;
+  border-width: 0;
+  margin-bottom: $small-padding;
+  font-size: $medium-text-size;
+}
+
 // Buttons
 
 .button-container {
@@ -128,19 +157,8 @@ h3 {
   font-family: $alegreya;
   font-weight: 600;
   border-width: 0;
-  padding: $small-padding;
+  padding: $tiny-padding $small-padding;
   white-space: nowrap;
   overflow: visible;
   cursor: pointer;
-}
-
-#email {
-  background-color: #b1b1b1;
-  max-width: 600px;
-  padding: 20px;
-  font-family: $alegreya;
-  color: $black;
-  border-width: 0;
-  margin-bottom: $small-padding;
-  font-size: $medium-text-size;
 }

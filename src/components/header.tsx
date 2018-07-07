@@ -11,8 +11,8 @@ export default class Header extends React.Component<HeaderProps, undefined> {
     return (
       <div className="header">
         <img src={logo} height="56px"/>
-        <span className="links">Info</span>
-        <span className="links">Supplies</span>
+        <span className="links">Care FAQ - Coming soon</span>
+        <span className="links">Supplies - Coming soon</span>
       </div>
     );
   }
