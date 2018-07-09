@@ -3,6 +3,7 @@ $border-color: red;
 $white: white;
 $black: black;
 $primary-blue: #076f7e;
+$light-gray: #E5E5E5;
 $large-padding: 6em;
 $medium-padding: 4em;
 $small-padding: 1.5em;
@@ -76,6 +77,8 @@ h3 {
 %section {
   padding: 0 $medium-padding $medium-padding $medium-padding;
   align-items: center;
+  justify-content: center;
+  min-height: 700px;
 }
 
 .section-black {
@@ -112,10 +115,42 @@ h3 {
 
 // Media Queries
 
-@media only screen 
+@media all 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-/* Styles */
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: $small-padding;
+  }
+
+  #email {
+    width: 80vw !important;
+  }
+
+  .align-right {
+    width: 90vw;
+    margin: $medium-padding 0 $medium-padding 0;
+  }
+
+  .mobile-smaller {
+    font-size: 13px;
+  }
+
+  .header {
+    padding: $small-padding;
+  }
+
+  .header .links {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: $tiny-padding;
+  }
+
+  .section-black {
+    padding: 0;
+  }
 }
 
 // Mail Chimp
@@ -126,9 +161,8 @@ and (max-device-width : 480px) {
 }
 
 #email {
-  background-color: #b1b1b1;
-  max-width: 600px;
-  width: 600px;
+  background-color: $light-gray;
+  width: 35vw;
   padding: 20px;
   font-family: $alegreya;
   color: $black;
